@@ -9,6 +9,7 @@
 <body>
   <div class="container">
     <button type="button" id="changeHeadingsBtn">Change Headings to Lorem Ipsum</button>
+    <button type="button" id="toggleSpansBtn">Toggle Form Spans to Block</button>
     <!-- HEADINGS -->
     <h1>Heading level 1</h1>
     <h2>Heading level 2</h2>
@@ -97,7 +98,6 @@
     </dialog>
 
     <!-- FORMS -->
-    <button type="button" id="toggleSpansBtn">Toggle Form Spans to Block</button>
     <form onsubmit="return false;">
       <span>
         <label for="select-id">Select</label>
@@ -215,8 +215,8 @@
       </span>
 
       <!-- radio -->
-      <div>
-        <label>Choose a radio:</label>
+      <fieldset>
+        <legend>Choose a radio:</legend>
         <div>
           <input type='radio' id='unselected-radio' name='radios' value='unselected'>
           <label for='unselected-radio'>Unselected</label>
@@ -229,12 +229,11 @@
           <input type='radio' id='disabled-radio' name='radios' value='disabled' disabled>
           <label for='disabled-radio'>Disabled</label>
         </div>
-      </div>
-      <br>
+      </fieldset>
 
       <!-- checkboxes -->
-      <div>
-        <label>Checkboxes</label>
+      <fieldset>
+        <legend>Checkboxes</legend>
         <div>
           <input type='checkbox' name='unchecked' id='unchecked'>
           <label for='unchecked'>Unchecked</label>
@@ -255,13 +254,17 @@
           <input type='checkbox' name='disabled2' id='disabled2' disabled checked>
           <label for='disabled2'>Disabled (checked)</label>
         </div>
-      </div>
+      </fieldset>
 
-      <label for="range">Range</label>
-      <input type="range" id="range" name="range" />
+      <span>
+        <label for="range">Range</label>
+        <input type="range" id="range" name="range" />
+      </span>
 
-      <label for="progress">Progress</label>
-      <progress id="progress" max="100" value="50">50%</progress>
+      <span>
+        <label for="progress">Progress</label>
+        <progress id="progress" max="100" value="50">50%</progress>
+      </span>
     </form>
 
     <!-- TABLES -->
